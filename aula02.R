@@ -1,23 +1,23 @@
 # 4.3 - Data Frames
 
 # Lendo um arquivo de texto: read.table(path.txt)
-T = read.table('musicas.txt', sep = ",")
-T
-class(T)
+musicas = read.table('musicas.txt', sep = ",")
+musicas
+class(musicas)
 
-# Extrair a quarta coluna de T
-T[,4]
-# Extrair a segunda linha de T
-T[2,]
+# Extrair a quarta coluna de musicas
+musicas[,4]
+# Extrair a segunda linha de musicas
+musicas[2,]
 # Extrair a coluna "V5"
-T$V5
+musicas$V5
 # Usar $ para extrair variáveis em data.frames
 
-names(T) = c("formato", "artista", "nome", "n_faixa", "tipo"); T
-T$nome
+names(musicas) = c("formato", "artista", "nome", "n_faixa", "tipo"); musicas
+musicas$nome
 
 # acrescentar uma coluna no data frame usando cbind()
-T = cbind(T, Faixa=c(7,6,5,46,35,24,10)); T
+musicas = cbind(musicas, Faixa=c(7,6,5,46,35,24,10)); musicas
 
 col1 = c(2,1,0)
 col2 = c(1,3,1)
