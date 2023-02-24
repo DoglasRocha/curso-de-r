@@ -61,7 +61,7 @@ SD<-100:10
 seq(1,100,1)
 seq(3,1020,3)
 seq(10,1,-2)
-seq(1,10,-3)
+seq(1,10,3)
 rep(1,80)
 rep(exp(5),85)
 r<-rep(c(1,2),10)
@@ -76,15 +76,15 @@ x<-1:12
 xmat<-matrix(x,ncol = 4)
 xmat<-matrix(x,ncol = 4,byrow = TRUE)
 A<-cbind(v1,v2,v3);A
-B<-rbind(v1,v2,c(1,5));B
+B<-rbind(v1,v2,c(1,5,7));B
 C<-rbind(v1,v2,v3);C
 
 
 X<-matrix(10:1,ncol = 2)
 Y<-cbind(X,1:5)
-TESTE<-cbind(X,1:4);TESTE
+TESTE<-cbind(X,1:5);TESTE
 T<-rbind(Y,rep(3,3));T
-Y<-matrix(1:50,ncol = 12)
+Y<-matrix(1:50,ncol = 5)
 
 # ============================================================================
 Y[4,3] # extrai elemento 4º linha 3º coluna
@@ -95,11 +95,12 @@ Y[,3] # extrai todas as linhas da 4º coluna
 
 Y[c(2,3,5),] # extrai todas as colunas das linhas 2,3 e 5
 
-Y[,5:7]
+Y[,3:5]
 
-ALUNOSr<-cbind(1:5,c(19,20,21,19,20),c(1,1,1,1,0));colnames(ALUNOSr)<-c("n","idade","sexo")
+ALUNOSr<-cbind(1:5,c(19,20,21,19,20),c(1,1,1,1,0));
+colnames(ALUNOSr)<-c("n","idade","sexo")
 
-fem<-ALUNOSr[,3]==0
 fem<-ALUNOSr[ALUNOSr[,3]==0,]
+fem20 = ALUNOSr[ALUNOSr[,3]==0 | ALUNOSr[,2]<20,]
 
-fem
+fem20
