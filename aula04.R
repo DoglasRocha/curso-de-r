@@ -1,14 +1,17 @@
 # graficos
-x = rnorm(10, 8, 1) # dados aleatorios - rnorm(numeroDeDados, mediaDosDados, desviopadrao)
+# dados aleatorios - rnorm(numeroDeDados, mediaDosDados, desviopadrao)
+x = rnorm(10, 8, 1) 
 plot(x)
 
 y = rnorm(10, 0, 1)
 plot(x, y)
 
-plot(x, main="Título", type='l', xlab="eixo x", ylab="eixo y") # type='l': faz o grafico ser de linha
-plot(x, main="Título", type='l', xlab="eixo x", ylab="eixo y", 
-     xlim=c(4,6), ylim=c(7,9)) # {eixo}lim(c(limiteInferior, limiteSuperior)): delimita o range do grafico
+# type='l': faz o grafico ser de linha
+plot(x, main="Título", type="l", xlab="eixo x", ylab="eixo y")
 
+# {eixo}lim(c(limiteInferior, limiteSuperior)): delimita o range do grafico
+plot(x, main="Título", type="l", xlab="eixo x", ylab="eixo y",
+     xlim=c(4, 6), ylim=c(7, 9))
 plot(x, main="Título", type='l', xlab="eixo x", ylab="eixo y", 
      xlim=c(4,6), ylim=c(7,9), axes=FALSE) # axes=FALSE: tira os eixos
 
